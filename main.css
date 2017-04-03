@@ -1,0 +1,42 @@
+body {
+  /* Location of the image */
+  background-image: url(images/background.jpg);
+  
+  /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+  
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+  
+  /* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
+  
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
+  
+  /* Set a background color that will be displayed
+     while the background image is loading */
+  background-color: #464646;
+  color: rgb(255, 255, 255);    
+}
+nav{
+   background-color: rgba(0, 0, 0, 0.2); 
+    color: #000000; 
+}
+nav a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+i{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#home{
+    background-color: rgba(0, 0, 0, 0.14);
+    margin: 0 auto; 
+    margin-top: 15%; 
+    padding: 20px;
+}
