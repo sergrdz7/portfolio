@@ -11,13 +11,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--Other CSS files-->
     <link rel="stylesheet" href="main.css">  
+    
+    <!--  Plug ins jQuery, jQuery ScrollTO    -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script> 
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>  
   </head>
   <body>
-      <nav class="navbar fixed-top navbar-toggleable-lg navbar-default">
+    <header>
+      <nav class="navbar fixed-top navbar-toggleable-md navbar-default">
               <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+                <i class="fa fa-bars" aria-hidden="true"></i>
               </button>
-              <a class="navbar-brand" href="https://www.twitch.tv/"><i class="fa fa-twitch fa-2x" aria-hidden="true"></i></a>
+              <a class="navbar-brand" href="https://www.twitch.tv/"><i class="fa fa-twitch " aria-hidden="true"></i></a>
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                   <a class="nav-item nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
@@ -27,24 +32,79 @@
                 </div>
               </div>
         </nav><!--END OF NAVIGATION-->
-        
+      
         <div id="home" class="container text-center">
-            <div class="container">
-                <h1>Hello, I'm Sergio!</h1>
-                <p>I like to do stuff...</p>
-            </div>    
-        </div><!--End of body container-->
-
+            <h1>Hello, I'm Sergio!</h1>
+            <p>I like to do stuff...</p>
+            <button class="button-main">Hire me!</button>
+        </div><!--END OF FRONT PAGE TITLE -->
         
-  <script>
+        <div id="scroller" class="center">
+        <p>More about me</p>
+        <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+        </div><!--END OF FRONT PAGE CTA-->    
+      
+      </header> 
+      
+      <main class="container" id="content">
+        <h2>About</h2>
+          <p>Aute eu iudicem ea anim quibusdam de multos tamen, mandaremus ita dolor offendit 
+              id esse an si duis mandaremus, tamen laborum nescius eu ad quae varias e 
+              expetendis, dolore ea cernantur a ut e legam officia. Hic quorum sempiternum et 
+              aut id anim aute minim, est sunt arbitror pariatur ea ut doctrina e quibusdam. 
+              In noster quae tamen vidisse, o sunt o sint. Aut multos quo esse, ab quae fugiat 
+              culpa nostrud, sed dolor expetendis cernantur aut tempor nam occaecat. Voluptate 
+              esse ut consequat illustriora, ne labore instituendarum. A varias exercitation, 
+              excepteur ab duis eu nescius ubi sint commodo, est nulla exercitation, ab culpa 
+              deserunt despicationes ut varias laboris instituendarum e admodum eu fugiat 
+              laborum, doctrina ne quid. Expetendis ita doctrina, possumus veniam veniam 
+              ullamco minim, eiusmod distinguantur sed expetendis, duis aut senserit ubi 
+              aliqua. Nam ex sempiternum, an nam magna fugiat veniam.</p>
+          <h2>About</h2>
+          <p>Aute eu iudicem ea anim quibusdam de multos tamen, mandaremus ita dolor offendit 
+              id esse an si duis mandaremus, tamen laborum nescius eu ad quae varias e 
+              expetendis, dolore ea cernantur a ut e legam officia. Hic quorum sempiternum et 
+              aut id anim aute minim, est sunt arbitror pariatur ea ut doctrina e quibusdam. 
+              In noster quae tamen vidisse, o sunt o sint. Aut multos quo esse, ab quae fugiat 
+              culpa nostrud, sed dolor expetendis cernantur aut tempor nam occaecat. Voluptate 
+              esse ut consequat illustriora, ne labore instituendarum. A varias exercitation, 
+              excepteur ab duis eu nescius ubi sint commodo, est nulla exercitation, ab culpa 
+              deserunt despicationes ut varias laboris instituendarum e admodum eu fugiat 
+              laborum, doctrina ne quid. Expetendis ita doctrina, possumus veniam veniam 
+              ullamco minim, eiusmod distinguantur sed expetendis, duis aut senserit ubi 
+              aliqua. Nam ex sempiternum, an nam magna fugiat veniam.</p>
+          <h2>About</h2>
+          <p>Aute eu iudicem ea anim quibusdam de multos tamen, mandaremus ita dolor offendit 
+              id esse an si duis mandaremus, tamen laborum nescius eu ad quae varias e 
+              expetendis, dolore ea cernantur a ut e legam officia. Hic quorum sempiternum et 
+              aut id anim aute minim, est sunt arbitror pariatur ea ut doctrina e quibusdam. 
+              In noster quae tamen vidisse, o sunt o sint. Aut multos quo esse, ab quae fugiat 
+              culpa nostrud, sed dolor expetendis cernantur aut tempor nam occaecat. Voluptate 
+              esse ut consequat illustriora, ne labore instituendarum. A varias exercitation, 
+              excepteur ab duis eu nescius ubi sint commodo, est nulla exercitation, ab culpa 
+              deserunt despicationes ut varias laboris instituendarum e admodum eu fugiat 
+              laborum, doctrina ne quid. Expetendis ita doctrina, possumus veniam veniam 
+              ullamco minim, eiusmod distinguantur sed expetendis, duis aut senserit ubi 
+              aliqua. Nam ex sempiternum, an nam magna fugiat veniam.</p>
+      </main>
+        
+        
+        
+  <script type="text/javascript">
+      
+      $("#scroller").on('click', function (){
+          $(window).scrollTo("#content", 800);
+      });
+
+      
   </script>  
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
-      
-    <script
+<!--     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script> -->
+    <!--  <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
+  crossorigin="anonymous"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   </body>

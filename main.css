@@ -1,26 +1,27 @@
-body {
-  /* Location of the image */
-  background-image: url(images/background.jpg);
-  
-  /* Background image is centered vertically and horizontally at all times */
-  background-position: center center;
-  
-  /* Background image doesn't tile */
-  background-repeat: no-repeat;
-  
-  /* Background image is fixed in the viewport so that it doesn't move when 
-     the content's height is greater than the image's height */
-  background-attachment: fixed;
-  
-  /* This is what makes the background image rescale based
-     on the container's size */
-  background-size: cover;
-  
-  /* Set a background color that will be displayed
-     while the background image is loading */
-  background-color: #464646;
-  color: rgb(255, 255, 255);    
+
+body{
+    color: #bebebe;  
 }
+header{
+    background-image: url(images/background.jpg);
+    /* Use viewport height */
+    height: 100vh;
+    background-size: cover;
+    /* Center Content on page*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center; 
+    color: #ffffff;
+}
+.center{
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center; 
+}
+
+/*NAVIGATION*/
+
 nav{
    background-color: rgba(0, 0, 0, 0.2); 
     color: #000000; 
@@ -30,13 +31,57 @@ nav a{
     color: rgba(255, 255, 255, 0.5);
 }
 
-i{
+nav i{
+    transform: scale(1.1);
     color: rgba(255, 255, 255, 0.5);
 }
 
-#home{
-    background-color: rgba(0, 0, 0, 0.14);
-    margin: 0 auto; 
-    margin-top: 15%; 
-    padding: 20px;
+/*HEADER ELEMENTS*/
+
+.button-main{
+    background-color: rgba(109, 109, 109, 0);
+    color: white; 
+    border: solid #c4c3c3 1px;
+    text-align: center;
+    width: 150px; 
+    height: 50px;
+    margin: 0 auto;
+    position:relative;
+    top: 1%; 
+    border-radius: 40px; 
+    transition: All .5s;
+    transition-timing-function: cubic-bezier(0, 0, 0.52, 1.19);
+}   
+
+.button-main:hover {
+    
+    transform: scale(1.1);
+    background-color: #c4c3c3;
+    color: black; 
 }
+
+#scroller{
+   
+    display: inline-block;
+    position: absolute;  
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 2.5%;
+    transition: .3s;
+    transition-timing-function: ease-in-out;
+}
+#scroller p {
+    margin-bottom: inherit; 
+}
+
+#scroller:hover{
+    color: #c4c3c3;
+}
+
+
+
+
+
+
