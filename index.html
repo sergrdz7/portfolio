@@ -33,11 +33,14 @@
               </div>
         </nav><!--END OF NAVIGATION-->
       
-        <div id="home" class="container text-center">
-            <h1>Hello, I'm Sergio!</h1>
-            <p>I like to do stuff...</p>
+            <div id="home" class='container text-center console-container'>
+                <h1>Hi I'm Sergio and I <span id='text'></span>
+                <div class='console-underscore' id='console'>&#95;</div> websites.</h1>
+                
+            </div><!--END OF FRONT PAGE TITLE -->
             <button class="button-main">Hire me!</button>
-        </div><!--END OF FRONT PAGE TITLE -->
+            
+      
         
         <div id="scroller" class="center">
         <p>More about me</p>
@@ -96,6 +99,58 @@
           $(window).scrollTo("#content", 800);
       });
 
+      // function([string1, string2],target id,[color1,color2])    
+     consoleText(['Build', 'Code', 'Design'], 'text',['#33996e','#33996e','#33996e']);
+
+    function consoleText(words, id, colors) {
+      if (colors === undefined) colors = ['#b57070'];
+      var myTite ="Hi, Im Sergio";
+      var visible = true;
+      var con = document.getElementById('console');
+      var letterCount = 1;
+      var x = 1;
+      var waiting = false;
+      var target = document.getElementById(id)
+      target.setAttribute('style', 'color:' + colors[0])
+      window.setInterval(function() {
+
+        if (letterCount === 0 && waiting === false) {
+          waiting = true;
+          target.innerHTML = words[0].substring(0, letterCount)
+          window.setTimeout(function() {
+            var usedColor = colors.shift();
+            colors.push(usedColor);
+            var usedWord = words.shift();
+            words.push(usedWord);
+            x = 1;
+            target.setAttribute('style', 'color:' + colors[0])
+            letterCount += x;
+            waiting = false;
+          }, 1000)
+        } else if (letterCount === words[0].length + 1 && waiting === false) {
+          waiting = true;
+          window.setTimeout(function() {
+            x = -1;
+            letterCount += x;
+            waiting = false;
+          }, 1000)
+        } else if (waiting === false) {
+          target.innerHTML = words[0].substring(0, letterCount)
+          letterCount += x;
+        }
+      },80)
+      window.setInterval(function() {
+        if (visible === true) {
+          con.className = 'console-underscore hidden'
+          visible = false;
+
+        } else {
+          con.className = 'console-underscore'
+
+          visible = true;
+        }
+      }, 400)
+    }
       
   </script>  
 

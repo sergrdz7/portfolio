@@ -3,3 +3,6 @@
 -- Full image carousel repo: https://github.com/BlackrockDigital/startbootstrap-full-slider/blob/gh-pages/index.html
 
 -- Scrolling animation using jQuery plugin: https://github.com/flesler/jquery.scrollTo
+
+-- Console Animation 
+http://codepen.io/Tbgse/pen/dYaJyJ

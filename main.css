@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Khula:400,600,700');
 
 body{
-    color: #bebebe;  
+    color: #bebebe; 
+    font-family:'Khula', sans-serif;
 }
 header{
-    background-image: url(images/background.jpg);
+    background-image: url(images/background-2.jpg);
     /* Use viewport height */
     height: 100vh;
     background-size: cover;
@@ -13,6 +15,10 @@ header{
     justify-content: center;
     align-content: center; 
     color: #ffffff;
+}
+header h1{
+    font-weight: bold;
+    font-size:60px;
 }
 .center{
     margin: 0 auto;
@@ -36,28 +42,61 @@ nav i{
     color: rgba(255, 255, 255, 0.5);
 }
 
+/*Front Page Animation*/
+.hidden {
+  opacity:0;
+}
+.console-container {
+ 
+  
+  font-weight: bold; 
+  font-size:60px;
+  text-align:center;
+  height:200px;
+  width:600px;
+  display:inline-block;
+  position:relative;
+  color:white;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+}
+.console-underscore {
+   display:inline-block;
+  position:relative;
+  top:-0.14em;
+  left:10px;
+}
+
 /*HEADER ELEMENTS*/
 
 .button-main{
+    font-weight: bold;
+    font-size: 1.1rem;
     background-color: rgba(109, 109, 109, 0);
-    color: white; 
-    border: solid #c4c3c3 1px;
+    display: inline-block;
+    position: relative;
+    bottom: 20%;
+    color: #33996e;
+    border: solid #33996e 3px;
     text-align: center;
     width: 150px; 
     height: 50px;
     margin: 0 auto;
-    position:relative;
-    top: 1%; 
+   
     border-radius: 40px; 
-    transition: All .5s;
-    transition-timing-function: cubic-bezier(0, 0, 0.52, 1.19);
+    transition: All .4s;
+    transition-timing-function: ease-in-out;
+   
 }   
 
 .button-main:hover {
     
-    transform: scale(1.1);
-    background-color: #c4c3c3;
-    color: black; 
+    transform: scaleX(1.1);
+    background-color: #33996e;
+    color: white; 
 }
 
 #scroller{
@@ -74,10 +113,12 @@ nav i{
 }
 #scroller p {
     margin-bottom: inherit; 
+    font-size: 1.1rem;
+    
 }
 
 #scroller:hover{
-    color: #c4c3c3;
+    color: #33996e;
 }
 
 
