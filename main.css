@@ -3,6 +3,7 @@
 body{
     color: #bebebe; 
     font-family:'Khula', sans-serif;
+    background-color: #76b198;
 }
 header{
     background-image: url(images/background-2.jpg);
@@ -29,17 +30,17 @@ header h1{
 /*NAVIGATION*/
 
 nav{
-   background-color: rgba(0, 0, 0, 0.2); 
-    color: #000000; 
+   background-color: rgba(0, 0, 0, 0); 
+    color: #ffffff; 
 }
 nav a{
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.5);
+    color: #ffffff;
 }
 
 nav i{
     transform: scale(1.1);
-    color: rgba(255, 255, 255, 0.5);
+    color: #ffffff;
 }
 
 /*Front Page Animation*/
@@ -75,11 +76,11 @@ nav i{
 .button-main{
     font-weight: bold;
     font-size: 1.1rem;
-    background-color: rgba(109, 109, 109, 0);
+    background-color: rgba(10, 10, 10, 0.08);
     display: inline-block;
     position: relative;
     bottom: 20%;
-    color: #33996e;
+    color: #cdd0d0;
     border: solid #33996e 3px;
     text-align: center;
     width: 150px; 
@@ -96,11 +97,11 @@ nav i{
     
     transform: scaleX(1.1);
     background-color: #33996e;
-    color: white; 
+    color: #ffffff; 
 }
 
 #scroller{
-   
+    color: #cdd0d0;
     display: inline-block;
     position: absolute;  
     margin-left: auto;
@@ -120,6 +121,20 @@ nav i{
 #scroller:hover{
     color: #33996e;
 }
+main{
+    padding-top: 40px; 
+    background-color: #76b198;
+}
+
+h2{
+    padding: 30px;
+}
+
+.container-fluid {
+    padding-top: 40px;
+    background-color: white; 
+ }
+
 
 
 

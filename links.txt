@@ -6,3 +6,10 @@
 
 -- Console Animation 
 http://codepen.io/Tbgse/pen/dYaJyJ
+
+##Issues:
+
+-- Adjust media queries for mobile
+    -Background and content
+    
+-- Align Cards when mobile
