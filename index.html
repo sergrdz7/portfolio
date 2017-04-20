@@ -12,9 +12,10 @@
     <!--Other CSS files-->
     <link rel="stylesheet" href="main.css">  
     
-    <!--  Plug ins jQuery, jQuery ScrollTO    -->
+    <!--  Plug-ins jQuery, jQuery ScrollTO, MatchHeight.js   -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script> 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>  
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
   </head>
   <body>
     <header>
@@ -55,7 +56,7 @@
           <div class="col-md-3">
             <h2>My pic</h2>
           </div>
-          <div class="col-md-8">
+          <div class="col-md-9">
             <p>Aute eu iudicem ea anim quibusdam de multos tamen, mandaremus ita dolor offendit 
               id esse an si duis mandaremus, tamen laborum nescius eu ad quae varias e 
               expetendis, dolore ea cernantur a ut e legam officia. Hic quorum sempiternum et 
@@ -110,41 +111,52 @@
       </main>
       <div class="container-fluid">
         <h2 class="text-center">Current Projects</h2>
-        <div class="row">
-          <div class="col-sm-12 col-md-4 center">
-            <div class="card" style="width: 20rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="row text-center">
+          <div class="col-sm-6 col-md-4 col-lg-3 add-space">
+            <div class="card box">
+                <img class="card-img-top img-responsive" src="images/twitch.png" alt="Twitch Streaming App">
+                <div class="card-block">
+                    <h4 class="card-title">Twitch Streaming App</h4>
+                    <p class="card-text">List live featured channels</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div> 
+          </div>
+            
+          <div class="col-sm-6 col-md-4 col-lg-3 add-space">
+            <div class="card box">
+                <img class="card-img-top img-responsive" src="images/weather.png" alt="Card image cap">
                 <div class="card-block">
                     <h4 class="card-title">Card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">List current local weather</p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
           </div>
             
-          <div class="col-sm-12 col-md-4 center">
-            <div class="card" style="width: 20rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="col-sm-6 col-md-4 col-lg-3 add-space">
+            <div class="card box">
+                <img class="card-img-top img-responsive" src="images/wiki.png" alt="Card image cap">
                 <div class="card-block">
                     <h4 class="card-title">Card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">Search any wiki article.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+          </div>  
+        
+          <div class="col-sm-6 col-md-4 col-lg-3 add-space">
+            <div class="card box">
+                <img class="card-img-top img-responsive" src="images/landingPage.png" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">Card title</h4>
+                    <p class="card-text">The perfect landing page.</p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
           </div>
-            
-          <div class="col-sm-12 col-md-4 center">
-            <div class="card" style="width: 20rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-block">
-                    <h4 class="card-title">Card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-          </div>    
         </div><!--END OF CARD ROW-->  
-      </div>
+      </div><!--END OF PROJECTS SECTION-->
       
       <div class="container text-center">
         <h2>Contact Me</h2>
@@ -173,7 +185,7 @@
       });
 
       // function([string1, string2],target id,[color1,color2])    
-     consoleText(['Build', 'Code', 'Design'], 'text',['#33996e','#33996e','#33996e']);
+      consoleText(['Build', 'Code', 'Design'], 'text',['#33996e','#33996e','#33996e']);
 
     function consoleText(words, id, colors) {
       if (colors === undefined) colors = ['#b57070'];
@@ -225,14 +237,12 @@
       }, 400)
     }
       
+    //MatchHeight function used on Projects section  
+    $(".box").matchHeight();   
+      
   </script>  
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
-<!--     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script> -->
-    <!--  <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   </body>
