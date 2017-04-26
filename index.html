@@ -4,7 +4,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <!--Font Awesome-->
@@ -158,89 +157,41 @@
         </div><!--END OF CARD ROW-->  
       </div><!--END OF PROJECTS SECTION-->
       
-      <div class="container text-center">
-        <h2>Contact Me</h2>
-        <p>Aute eu iudicem ea anim quibusdam de multos tamen, mandaremus ita dolor offendit 
-              id esse an si duis mandaremus, tamen laborum nescius eu ad quae varias e 
-              expetendis, dolore ea cernantur a ut e legam officia. Hic quorum sempiternum et 
-              aut id anim aute minim, est sunt arbitror pariatur ea ut doctrina e quibusdam. 
-              In noster quae tamen vidisse, o sunt o sint. Aut multos quo esse, ab quae fugiat 
-              culpa nostrud, sed dolor expetendis cernantur aut tempor nam occaecat. Voluptate 
-              esse ut consequat illustriora, ne labore instituendarum. A varias exercitation, 
-              excepteur ab duis eu nescius ubi sint commodo, est nulla exercitation, ab culpa 
-              deserunt despicationes ut varias laboris instituendarum e admodum eu fugiat 
-              laborum, doctrina ne quid. Expetendis ita doctrina, possumus veniam veniam 
-              ullamco minim, eiusmod distinguantur sed expetendis, duis aut senserit ubi 
-              aliqua. Nam ex sempiternum, an nam magna fugiat veniam.</p> 
-      </div><!--END OF FORM CONTAINER-->
+      <div class="container">
+        <h2 class="text-center">Contact Me</h2>
+        <form>
+            <div class="form-group row">
+                <label for="name" class="col-sm-3 col-form-label">Name</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="name" placeholder="Name">
+                </div>
+            </div>
+            
+            <div class="form-group row">
+                <label for="email" class="col-sm-3 col-form-label">Email</label>
+                <div class="col-sm-8">
+                    <input type="email" class="form-control" id="email" placeholder="What's your email?">
+                </div>
+            </div>
+            
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" for="exampleTextarea">Description</label>
+                <div class="col-sm-8">
+                    <textarea class="form-control" id="exampleTextarea" placeholder="Tell me about your project." rows="5">
+                    </textarea>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="button-submit">Send</button>
+            </div>
+        </form> 
+      </div> <!--END OF CONTACT FORM CONTAINER-->
+      <footer>
+        <h2>Footer section</h2>
+        <p>eu iudicem ea anim quibusdam de multos tamen, mandaremus ita dolor offendit id esse an si duis mandaremus</p>
+      </footer>
       
-      
-        
-        
-        
-  <script type="text/javascript">
-      
-      $("#scroller").on('click', function (){
-          $(window).scrollTo("#content", 800);
-      });
-
-      // function([string1, string2],target id,[color1,color2])    
-      consoleText(['Build', 'Code', 'Design'], 'text',['#33996e','#33996e','#33996e']);
-
-    function consoleText(words, id, colors) {
-      if (colors === undefined) colors = ['#b57070'];
-      var myTite ="Hi, Im Sergio";
-      var visible = true;
-      var con = document.getElementById('console');
-      var letterCount = 1;
-      var x = 1;
-      var waiting = false;
-      var target = document.getElementById(id)
-      target.setAttribute('style', 'color:' + colors[0])
-      window.setInterval(function() {
-
-        if (letterCount === 0 && waiting === false) {
-          waiting = true;
-          target.innerHTML = words[0].substring(0, letterCount)
-          window.setTimeout(function() {
-            var usedColor = colors.shift();
-            colors.push(usedColor);
-            var usedWord = words.shift();
-            words.push(usedWord);
-            x = 1;
-            target.setAttribute('style', 'color:' + colors[0])
-            letterCount += x;
-            waiting = false;
-          }, 1000)
-        } else if (letterCount === words[0].length + 1 && waiting === false) {
-          waiting = true;
-          window.setTimeout(function() {
-            x = -1;
-            letterCount += x;
-            waiting = false;
-          }, 1000)
-        } else if (waiting === false) {
-          target.innerHTML = words[0].substring(0, letterCount)
-          letterCount += x;
-        }
-      },80)
-      window.setInterval(function() {
-        if (visible === true) {
-          con.className = 'console-underscore hidden'
-          visible = false;
-
-        } else {
-          con.className = 'console-underscore'
-
-          visible = true;
-        }
-      }, 400)
-    }
-      
-    //MatchHeight function used on Projects section  
-    $(".box").matchHeight();   
-      
-  </script>  
+  <script type="text/javascript" src="scripts.js"></script>  
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
