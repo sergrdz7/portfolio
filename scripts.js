@@ -56,4 +56,36 @@ $("#scroller").on('click', function (){
     }
       
     //MatchHeight function used on Projects section  
-    $(".box").matchHeight();   
+    $(".box").matchHeight();
+
+    //Send button listenters for Form Validation
+    $("form").submit(function (e){
+        e.preventDefault(); //Prevents from submitting form
+        var error = "";    
+        //Check name field
+        if ($("#name").val() == ""){
+            error += "<p>Enter your name or company</p>"; 
+        }
+        if ($("#email").val() == ""){
+            error += "<p>Enter your email</p>"; 
+        }
+        if ($("#message").val() == ""){
+            error += "<p>Don't forget to give a brief description</p>"; 
+        }
+        //Update error html
+        if (error != ""){
+            $("#error").html('<div class="alert alert-warning" role="alert"><p><strong>Oh hey!</strong></p>'+error+'</div>');
+        }else{
+            //Success Message and Submit Form
+            $("form").unbind("submit").submit();
+            $("#error").html('<div class="alert alert-success" role="alert"><p><strong>Success</strong></p></div>');
+        }
+        
+        
+    
+    });
+
+
+
+
+

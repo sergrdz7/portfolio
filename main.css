@@ -172,6 +172,11 @@ footer{
     height: 100%; 
     background-color: #676767;
 }
+#error{
+    position: relative; 
+    top: 20px;
+    margin-top 30px;
+}
 
 
 
