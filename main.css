@@ -175,7 +175,12 @@ footer{
 #error{
     position: relative; 
     top: 20px;
-    margin-top 30px;
+    margin-top: 30px;
+}
+#success{
+    position: relative; 
+    top: 30px; 
+    margin-top: 30px;
 }
 
 

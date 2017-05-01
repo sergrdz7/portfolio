@@ -1,4 +1,60 @@
+<?php
 
+    $error = "";
+    $successMessage = "";
+
+    if($_POST){
+        
+        
+        if(!$_POST["email"]) {
+            
+            $error .= "An email address is required.<br>";
+            
+        }
+        if(!$_POST["name"]) {
+            
+            $error .= "Enter your name or company.<br>";
+            
+        }
+        if(!$_POST["message"]) {
+            
+            $error .= "Tell me about your project.<br>";
+            
+        }
+        
+        //VALIDATE EMAIL
+        if ($_POST['
+        email'] && filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+            $error .= "The email address is invalid.<br>";
+        }
+        
+        if ($error != "") {
+            
+            $error = '<div class="alert alert-warning" role="alert"><p><strong>'.$error.'</strong></p></div>';
+            
+        } else {
+            //SET EMAIL VARIABLES
+            $emailTo = "sergiordz7@gmail.com";
+            $subject = $_POST['name'];
+            $message = $_POST['message'];
+            $headers = "From: ".$_POST['email']; 
+            
+            
+            //SEND EMAIL FUNCTION
+            if(mail($emailTo, $subject, $message, $headers)) {
+                //DISPLAY SUCCES MESSAGE
+                $successMessage = '<div class="alert alert-success" role="alert"><p><strong>Your message was sent. I will get back to you as soon as I can.</strong></p></div>';
+            } else {
+                //DISPLAY ERROR MASSAGE IF EMAIL FAILS
+                $successMessage = ""; 
+                $error = '<div class="alert alert-danger" role="alert"><p><strong>Your message was not sent, please try again later.</strong></p></div>';
+            }
+            
+        }
+    }
+    
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -35,7 +91,7 @@
                 </div>
               </div>
         </nav><!--END OF NAVIGATION-->
-      
+            <div class="container" id="success"><? echo $successMessage; ?></div>
             <div id="home" class='container text-center console-container'>
                 <h1>Hi I'm Sergio and I <span id='text'></span>
                 <div class='console-underscore' id='console'>&#95;</div> websites.</h1>
@@ -160,11 +216,11 @@
         </div><!--END OF CARD ROW-->  
       </div><!--END OF PROJECTS SECTION-->
       
-      <div class="container">
+      <div class="container" id="form-container">
         <h2 class="text-center">Contact Me</h2>
         
           
-        <form action="validation.php" method="post">
+        <form method="post">
             <div class="form-group row">
                 <label for="name" class="col-sm-3 col-form-label">Name*</label>
                 <div class="col-sm-8">
@@ -192,9 +248,7 @@
                 <button id="sendButton" type="submit" class="button-submit">Send</button>
             </div>
         </form>
-          
-          
-        <div id="error"></div>
+        <div id="error"><? echo $error; ?></div>
       </div> <!--END OF CONTACT FORM CONTAINER-->
     
       <footer>
@@ -202,7 +256,96 @@
         <p>eu iudicem ea anim quibusdam de multos tamen, mandaremus ita dolor offendit id esse an si duis mandaremus</p>
       </footer>
       
-  <script type="text/javascript" src="scripts.js"></script>  
+<script type="text/javascript">
+
+    $("#scroller").on('click', function (){
+          $(window).scrollTo("#content", 800);
+      });
+
+      // function([string1, string2],target id,[color1,color2])    
+      consoleText(['Build', 'Code', 'Design'], 'text',['#33996e','#33996e','#33996e']);
+
+    function consoleText(words, id, colors) {
+      if (colors === undefined) colors = ['#b57070'];
+      var myTite ="Hi, Im Sergio";
+      var visible = true;
+      var con = document.getElementById('console');
+      var letterCount = 1;
+      var x = 1;
+      var waiting = false;
+      var target = document.getElementById(id)
+      target.setAttribute('style', 'color:' + colors[0])
+      window.setInterval(function() {
+
+        if (letterCount === 0 && waiting === false) {
+          waiting = true;
+          target.innerHTML = words[0].substring(0, letterCount)
+          window.setTimeout(function() {
+            var usedColor = colors.shift();
+            colors.push(usedColor);
+            var usedWord = words.shift();
+            words.push(usedWord);
+            x = 1;
+            target.setAttribute('style', 'color:' + colors[0])
+            letterCount += x;
+            waiting = false;
+          }, 1000)
+        } else if (letterCount === words[0].length + 1 && waiting === false) {
+          waiting = true;
+          window.setTimeout(function() {
+            x = -1;
+            letterCount += x;
+            waiting = false;
+          }, 1000)
+        } else if (waiting === false) {
+          target.innerHTML = words[0].substring(0, letterCount)
+          letterCount += x;
+        }
+      },80)
+      window.setInterval(function() {
+        if (visible === true) {
+          con.className = 'console-underscore hidden'
+          visible = false;
+
+        } else {
+          con.className = 'console-underscore'
+
+          visible = true;
+        }
+      }, 400)
+    }
+      
+    //MatchHeight function used on Projects section  
+    $(".box").matchHeight();
+
+    //Send button listenters for Form Validation
+    $("form").submit(function (e){
+        e.preventDefault(); //Prevents from submitting form
+        var error = "";    
+        //Check name field
+        if ($("#name").val() == ""){
+            error += "<p>Enter your name or company</p>"; 
+        }
+        if ($("#email").val() == ""){
+            error += "<p>Enter your email</p>"; 
+        }
+        if ($("#message").val() == ""){
+            error += "<p>Don't forget to give a brief description</p>"; 
+        }
+        //Update error html
+        if (error != ""){
+            $("#success").html(""); 
+            $("#error").html('<div class="alert alert-warning" role="alert"><p><strong>Oh hey!</strong></p>'+error+'</div>');
+        }else{
+            //Success Message and Submit Form
+            $("form").unbind("submit").submit();
+        }
+        
+        
+    
+    });
+    
+</script>  
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
