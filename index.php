@@ -93,7 +93,7 @@
         </nav><!--END OF NAVIGATION-->
             <div class="container" id="success"><? echo $successMessage; ?></div>
             <div id="home" class='container text-center console-container'>
-                <h1>Hi I'm Sergio and I <span id='text'></span>
+                <h1>Yes I'm Sergio and I <span id='text'></span>
                 <div class='console-underscore' id='console'>&#95;</div> websites.</h1>
                 
             </div><!--END OF FRONT PAGE TITLE -->
