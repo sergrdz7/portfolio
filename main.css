@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Khula:400,600,700');
 
 body{
-    color: #bebebe; 
+    color: #bebebe;
     font-family:'Khula', sans-serif;
     background-color: #76b198;
 }
@@ -14,7 +14,7 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center; 
+    align-content: center;
     color: #ffffff;
 }
 header h1{
@@ -24,14 +24,14 @@ header h1{
 .center{
     margin: 0 auto;
     padding: 10px;
-    text-align: center; 
+    text-align: center;
 }
 
 /*NAVIGATION*/
 
 nav{
-   background-color: rgba(0, 0, 0, 0); 
-    color: #ffffff; 
+   background-color: rgba(0, 0, 0, 0);
+    color: #ffffff;
 }
 nav a{
     text-decoration: none;
@@ -48,9 +48,9 @@ nav i{
   opacity:0;
 }
 .console-container {
- 
-  
-  font-weight: bold; 
+
+
+  font-weight: bold;
   font-size:60px;
   text-align:center;
   height:200px;
@@ -83,22 +83,22 @@ nav i{
     color: #ffffff;
     border: none #33996e 3px;
     text-align: center;
-    width: 150px; 
+    width: 150px;
     height: 50px;
     margin: 0 auto;
-   
-    border-radius: 40px; 
+
+    border-radius: 40px;
     transition: All .4s;
     transition-timing-function: ease-in-out;
-   
-}   
+
+}
 
 .button-main:hover {
-    
+
     transform: scaleX(1.1);
     background-color: #676767;
     border: none #33996e 2px;
-    color: #ffffff; 
+    color: #ffffff;
 }
 
 .button-submit{
@@ -111,11 +111,11 @@ nav i{
     color: #cdd0d0;
     border: none #33996e 3px;
     text-align: center;
-    width: 150px; 
+    width: 150px;
     height: 50px;
     margin: 0 auto;
-   
-    border-radius: 40px; 
+
+    border-radius: 40px;
     transition: All .4s;
     transition-timing-function: ease-in-out;
 }
@@ -123,13 +123,36 @@ nav i{
     transform: scaleX(1.1);
     background-color: #33996e;
     border: none #676767 2px;
-    color: #ffffff; 
+    color: #ffffff;
 }
 
+.button-projects{
+  background-color: #33996e;
+  color: #cdd0d0;
+  border: none #33996e 3px;
+  text-align: center;
+
+  width: 150px;
+  height: 40px;
+  margin: 15px auto;
+
+  border-radius: 40px;
+  transition: All .4s;
+  transition-timing-function: ease-in-out;
+
+}
+/*Try to make width transform only*/
+.button-projects:hover{
+  transform: scaleX(1.05);
+  background-color: rgb(103, 103, 103);
+  border: none #676767 2px;
+  color: #ffffff;
+}
+/*AUTO SCROLL ANIMATION*/
 #scroller{
     color: #cdd0d0;
     display: inline-block;
-    position: absolute;  
+    position: absolute;
     margin-left: auto;
     margin-right: auto;
     left: 0;
@@ -139,16 +162,17 @@ nav i{
     transition-timing-function: ease-in-out;
 }
 #scroller p {
-    margin-bottom: inherit; 
+    margin-bottom: inherit;
     font-size: 1.1rem;
-    
+
 }
 
 #scroller:hover{
     color: #33996e;
 }
 main{
-    padding-top: 40px; 
+    padding-top: 40px;
+    padding-bottom: 30px;
     background-color: #76b198;
 }
 
@@ -158,34 +182,38 @@ h2{
 
 .container-fluid {
     padding-top: 40px;
-    background-color: white; 
+    background-color: white;
  }
 
 .add-space{
     padding: 12px;
     height: 100%;
-    
+
+}
+.image-circle{
+  border-radius: 55%;
+}
+.image-icon-128{
+  width: 128px;
+  height: 128px;
+}
+.add-top-padding{
+  padding-top: 22px;
 }
 
 footer{
     margin-top: 30px;
-    height: 100%; 
+    height: 100%;
     background-color: #676767;
 }
+/*ERROR MESSAGES*/
 #error{
-    position: relative; 
+    position: relative;
     top: 20px;
     margin-top: 30px;
 }
 #success{
-    position: relative; 
-    top: 30px; 
+    position: relative;
+    top: 30px;
     margin-top: 30px;
 }
-
-
-
-
-
-
-
