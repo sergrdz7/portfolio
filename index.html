@@ -45,177 +45,298 @@
           <p>More about me</p>
           <i class="fa fa-angle-double-down" aria-hidden="true"></i>
         </div><!--END OF FRONT PAGE CTA-->
-    </header>
+    </header><!--END OF TITLE PAGE-->
 
-    <main class="container" id="content">
-      <h2 class="text-center">ABOUT ME</h2>
-      <div class="row">
-        <div class="col-md-4 text-center center">
-          <img class="image-circle" src="images/profile.jpg" width="225" height="225">
+    <div class="container-fluid" id="aboutMe">
+        <h2 class="text-center">ABOUT ME</h2>
+        <div class="row">
+          <div class="col-md-4 text-center center">
+            <img class="image-circle" src="images/profile.jpg" width="225" height="225">
+          </div>
+          <div class="col-md-8">
+            <p class="add-space">Hello, I am Sergio Rodriguez a junior front-end developer
+              with a strong passion for technology. I have a Bachelor’s degree in Computer
+              Engineering Technology where I was first introduced to programming. I am
+              currently a student of Free Code Camp, an open source community that helps
+              people learn development by building projects and helping non-profits. Free
+              Code Camp has helped me transition from lower level programming into the world
+              of web development, more specifically Front-End. Although it has been a tough
+              journey, I’ve focused my learning around fundamentals to better understand the
+              current and new trends of the web. Feel free to navigate through my portfolio
+              and look under the hood of my projects. I am available for hire, so if you have
+              a challenging project in mind or an interesting position available get in touch!</p>
+          </div>
         </div>
-        <div class="col-md-8">
-          <p class="add-space">Aute eu iudicem ea anim quibusdam de multos tamen, mandaremus ita dolor offendit
-            id esse an si duis mandaremus, tamen laborum nescius eu ad quae varias e
-            expetendis, dolore ea cernantur a ut e legam officia. Hic quorum sempiternum et
-            aut id anim aute minim, est sunt arbitror pariatur ea ut doctrina e quibusdam.
-            In noster quae tamen vidisse, o sunt o sint. Aut multos quo esse, ab quae fugiat
-            culpa nostrud, sed dolor expetendis cernantur aut tempor nam occaecat. Voluptate
-            esse ut consequat illustriora, ne labore instituendarum. A varias exercitation,
-            excepteur ab duis eu nescius ubi sint commodo, est nulla exercitation, ab culpa
-            deserunt despicationes ut varias laboris instituendarum e admodum eu fugiat
-            laborum, doctrina ne quid. Expetendis ita doctrina, possumus veniam veniam
-            ullamco minim, eiusmod distinguantur sed expetendis, duis aut senserit ubi
-            aliqua. Nam ex sempiternum, an nam magna fugiat veniam.</p>
+    </div><!--END ABOUT ME-->
+
+    <div class="container-fluid" id="skills">
+      <h2 class="text-center">WHAT I DO</h2>
+      <div class="row text-center">
+        <div class="col-md-6">
+          <h3>Code <i class="fa fa-code" aria-hidden="true"></i></h3>
+          <p>Assist in the growth or your business by applying SEO optimization techniques and
+            building a responsive and mobile ready application</p>
+        </div>
+        <div class="col-md-6">
+          <h3>Design <i class="fa fa-paint-brush" aria-hidden="true"></i></h3>
+          <p>Help bring your design to live by applying best user experience practices and enhance
+            the way the user interacts and sees your content.</p>
         </div>
       </div>
+      <h2 class="text-center">SKILL SET</h2>
+      <div class="row text-center">
+        <div class="col add-top-padding">
+          <h3>HTML</h3>
+          <img class="" src="icons/html5Logo.png" alt="icon">
+        </div>
+        <div class="col add-top-padding">
+          <h3>CSS</h3>
+          <img class="" src="icons/CSSLogo.png" alt="icon">
+        </div>
+        <div class="col add-top-padding">
+          <h3>JavaScript</h3>
+          <img class="" src="icons/jsLogo.png" alt="icon">
+        </div>
+        <div class="col add-top-padding">
+          <h3>Bootstrap</h3>
+          <img class="" src="icons/bootstrapLogo.png" alt="icon">
+        </div>
+        <div class="col add-top-padding">
+          <h3>jQuery</h3>
+          <img class="add-top-padding" src="icons/jQueryLogo1.png" alt="icon">
+        </div>
+        <div class="col add-top-padding">
+          <h3>GitHub</h3>
+          <img class="" src="icons/gitHub.png" alt="icon">
+        </div>
+        <div class="col add-top-padding">
+          <h3>Git</h3>
+          <img class="" src="icons/gitLogo.png" alt="icon">
+        </div>
+        <div class="col add-top-padding">
+          <h3>PHP</h3>
+          <img class="" src="icons/php-sm.png" alt="icon">
+        </div>
+      </div>
+      <!--Trigger Resume Modal-->
+      <button type="button" class="button-submit" data-target="#resume" data-toggle="modal">Resume
+        <i class="fa fa-download " aria-hidden="true"></i></button>
 
-        <h2 class="text-center">WHAT I DO</h2>
-        <div class="row text-center">
-          <div class="col-md-4">
-            <h3>Icon</h3>
-            <p>Aute eu iudicem ea anim quibusdam de multos tamen, mandaremus ita dolor offendit
-            id esse an si duis mandaremus</p>
-          </div>
-          <div class="col-md-4">
-            <h3>Icon</h3>
-            <p>Aute eu iudicem ea anim quibusdam de multos tamen, mandaremus ita dolor offendit
-            id esse an si duis mandaremus</p>
-          </div>
-          <div class="col-md-4">
-            <h3>Icon</h3>
-            <p>Aute eu iudicem ea anim quibusdam de multos tamen, mandaremus ita dolor offendit
-            id esse an si duis mandaremus</p>
+      <!-- Modal Window For Resume -->
+      <div class="modal fade" id="resume" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Sergio Rodriguez</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+
+  <div class="modal-body">
+    <div id="resume">
+      <h4>Objective</h4>
+      <p>Currently taking in freelance projects or an entry front-end development role.</p>
+      <hr/>
+      <h4>Education</h4>
+      <hr/>
+      <p>Bacherlor of Science, Computer Engineering Technology</p>
+      <p>University of Houston, <span>Houston, Tx</span></p>
+      <div class="row">
+        <div class="col">
+          <ul>
+            <li>AC/DC Circuit Analysis</li>
+            <li>Mircroprocessor Architecture</li>
+            <li>Digital Systems</li>
+            <li>Sensor Applications</li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            <li>Embedded Systems</li>
+            <li>Computer Networks</li>
+            <li>Advance Micro-Networks</li>
+            <li>Information Systems Application Development</li>
+          </ul>
+        </div>
+      </div>
+      <hr/>
+      <h4>Experience</h4>
+      <hr/>
+      <h4>Miguel's Carpentry and Construction</h4>
+      <p>I've worked for a small family business in carpetry for a number of years where I got to
+        experince a diverse number of roles.</p>
+      <ul>
+        <li>Design, build, install interior carpentry <span class="date">2012-2014</span></li>
+        <li>Promoted to lead carpenter <span class="date">2014-Present</span></li>
+          <ul>
+            <li>Interpret blueprints and schematics from clients and ensured labor is completed accordingly</li>
+            <li>Estimate cost, time, and materials required for contruction projects</li>
+            <li>Implement safety management initiatives to maintain accident-free workplace</li>
+          </ul>
+      </ul>
+      <hr/>
+      <h4>Skills and Stengths</h4>
+      <hr/>
+      <div class="row">
+        <div class="col">
+          <p>Most proficient:</p>
+          <ul>
+            <li>HTML/CSS</li>
+            <li>Javascript</li>
+            <li>DOM Manipulation</li>
+            <li>Bootstrap</li>
+            <li>JQuery</li>
+            <li>Github</li>
+            <li>Atom editor</li>
+          </ul>
+        </div>
+        <div class="col">
+          <p>Also had experience:</p>
+          <ul>
+            <li>Using API's</li>
+            <li>Responsive Design</li>
+            <li>Git</li>
+            <li>PHP/Java/C</li>
+            <li>FTP tools</li>
+            <li>Databases with SQlite</li>
+        </ul>
+        </div>
+        <div class="col">
+          <p>Hardware:</p>
+          <ul>
+            <li>Microcontrollers</li>
+            <li>ARM Cortex M3</li>
+            <li>Oscilloscopes</li>
+            <li>Function Generators</li>
+            <li>Multimeters</li>
+        </ul>
+        </div>
+      </div>
+      <hr>
+      <h4>Academic Awards in Team Projects</h4>
+      <hr/>
+        <ul>
+          <li class="list-style-main">Placed 2nd in Microprocessor Architecture Team Project (3 members)</li>
+            <ul><li class="list-style">Designed an Automatic Brewing Refrigerator, assisted in software development using C.</li></ul>
+          <li class="list-style-main">Placed 3rd in Sensor Applications Team Project (4 members)</li>
+            <ul><li class="list-style">Designed a Smart Cooling System, team leader, assisted with sensor interfacing.</li></ul>
+          <li class="list-style-main">Placed 3rd in Embedded Systems Team Project (4 members)</li>
+            <ul><li class="list-style">Designed an Automatic Drink Dispenser with a LCD interface as the menu. Assisted with the design, software, and hardware of the prototype.</li></ul>
+        </ul>
+      <hr/>
+    </div><!--END OF RESUME-->
+
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
           </div>
         </div>
-        <h2 class="text-center">Skill Set</h2>
-        <div class="row text-center">
-          <div class="col add-top-padding">
-            <h3>HTML</h3>
-            <img class="" src="icons/html5Logo.png" alt="icon">
-          </div>
-          <div class="col add-top-padding">
-            <h3>CSS</h3>
-            <img class="" src="icons/CSSLogo.png" alt="icon">
-          </div>
-          <div class="col add-top-padding">
-            <h3>JavaScript</h3>
-            <img class="" src="icons/jsLogo.png" alt="icon">
-          </div>
-          <div class="col add-top-padding">
-            <h3>Bootstrap</h3>
-            <img class="" src="icons/bootstrapLogo.png" alt="icon">
-          </div>
-          <div class="col add-top-padding">
-            <h3>jQuery</h3>
-            <img class="add-top-padding" src="icons/jQueryLogo1.png" alt="icon">
-          </div>
-          <div class="col add-top-padding">
-            <h3>GitHub</h3>
-            <img class="" src="icons/gitHub.png" alt="icon">
-          </div>
-          <div class="col add-top-padding">
-            <h3>Git</h3>
-            <img class="" src="icons/gitLogo.png" alt="icon">
-          </div>
-          <div class="col add-top-padding">
-            <h3>PHP</h3>
-            <img class="" src="icons/php-sm.png" alt="icon">
+      </div><!--END OF MODAL WINDOW-->
+    </div><!--END OF SKILLSET SECTION-->
+
+    <div class="container-fluid" id="portfolio">
+      <h2 class="text-center">PORTFOLIO</h2>
+      <div class="row text-center">
+        <div class="col-sm-6 col-md-4 col-lg-3 add-space">
+          <div class="card box">
+            <img class="card-img-top img-responsive" src="images/twitch.png" alt="Twitch Streaming App">
+            <div class="card-block">
+              <h4 class="card-title">Twitch Streaming App</h4>
+              <p class="card-text">Used Twitch.Tv Api to show online featured channels and find the status and link to any channel of your choosing.</p>
+              <a href="http://codepen.io/serg_92/full/MpBgPR/" target="_blank"><button class="button-projects">Live Demo <i class="fa fa-codepen" aria-hidden="true"></i></button></a>
+            </div>
           </div>
         </div>
-    </main>
-      <div class="container-fluid">
-        <h2 class="text-center">Current Projects</h2>
-        <div class="row text-center">
-          <div class="col-sm-6 col-md-4 col-lg-3 add-space">
-            <div class="card box">
-              <img class="card-img-top img-responsive" src="images/twitch.png" alt="Twitch Streaming App">
-              <div class="card-block">
-                <h4 class="card-title">Twitch Streaming App</h4>
-                <p class="card-text">Used Twitch.Tv Api to show online featured channels and find the status and link to any channel of your choosing.</p>
-                <a href="http://codepen.io/serg_92/full/MpBgPR/" target="_blank"><button class="button-projects">Live Demo <i class="fa fa-codepen" aria-hidden="true"></i></button></a>
-              </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 add-space">
+          <div class="card box">
+            <img class="card-img-top img-responsive" src="images/weather.png" alt="Card image cap">
+            <div class="card-block">
+              <h4 class="card-title">Local Weather</h4>
+              <p class="card-text">Simple web app that displays the location, weather, and temperature using the OpenWeatherMap API.</p>
+              <a href="http://codepen.io/serg_92/full/QGyQxJ/" target="_blank"><button class="button-projects">Live Demo <i class="fa fa-codepen" aria-hidden="true"></i></button></a>
             </div>
           </div>
+        </div>
 
-          <div class="col-sm-6 col-md-4 col-lg-3 add-space">
-            <div class="card box">
-              <img class="card-img-top img-responsive" src="images/weather.png" alt="Card image cap">
-              <div class="card-block">
-                <h4 class="card-title">Local Weather</h4>
-                <p class="card-text">Simple web app that displays the location, weather, and temperature using the OpenWeatherMap API.</p>
-                <a href="http://codepen.io/serg_92/full/QGyQxJ/" target="_blank"><button class="button-projects">Live Demo <i class="fa fa-codepen" aria-hidden="true"></i></button></a>
-              </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 add-space">
+          <div class="card box">
+            <img class="card-img-top img-responsive" src="images/wiki.png" alt="Card image cap">
+            <div class="card-block">
+              <h4 class="card-title">Wikipedia Viewer</h4>
+              <p class="card-text">A search engine with minimal design that allows users to search for any Wiki articles using the Wikipedia API.</p>
+              <a href="http://codepen.io/serg_92/full/ZeYwYw/" target="_blank"><button class="button-projects">Live Demo <i class="fa fa-codepen" aria-hidden="true"></i></button></a>
             </div>
           </div>
+        </div>
 
-          <div class="col-sm-6 col-md-4 col-lg-3 add-space">
-            <div class="card box">
-              <img class="card-img-top img-responsive" src="images/wiki.png" alt="Card image cap">
-              <div class="card-block">
-                <h4 class="card-title">Wikipedia Viewer</h4>
-                <p class="card-text">A search engine with minimal design that allows users to search for any Wiki articles using the Wikipedia API.</p>
-                <a href="http://codepen.io/serg_92/full/ZeYwYw/" target="_blank"><button class="button-projects">Live Demo <i class="fa fa-codepen" aria-hidden="true"></i></button></a>
-              </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 add-space">
+          <div class="card box">
+            <img class="card-img-top img-responsive" src="images/landingPage.png" alt="Card image cap">
+            <div class="card-block">
+              <h4 class="card-title">Product Landing Page</h4>
+              <p class="card-text">Simple yet effective landing page for any product or business using Bootstrap framework.</p>
+              <a href="https://codepen.io/serg_92/full/XREqMd/" target="_blank"><button class="button-projects">Live Demo <i class="fa fa-codepen" aria-hidden="true"></i></button></a>
             </div>
           </div>
+        </div>
+      </div><!--END OF CARD ROW-->
+    </div><!--END OF PROJECTS SECTION-->
 
-          <div class="col-sm-6 col-md-4 col-lg-3 add-space">
-            <div class="card box">
-              <img class="card-img-top img-responsive" src="images/landingPage.png" alt="Card image cap">
-              <div class="card-block">
-                <h4 class="card-title">Product Landing Page</h4>
-                <p class="card-text">Simple yet effective landing page for any product or business using Bootstrap framework.</p>
-                <a href="https://codepen.io/serg_92/full/XREqMd/" target="_blank"><button class="button-projects">Live Demo <i class="fa fa-codepen" aria-hidden="true"></i></button></a>
-              </div>
-            </div>
-          </div>
-        </div><!--END OF CARD ROW-->
-      </div><!--END OF PROJECTS SECTION-->
-
-      <div class="container" id="form-container">
+    <div class="contaniner-fluid" id="form-container">
+      <div class="container">
         <h2 class="text-center">Contact Me</h2>
-
 
         <form method="post">
           <div class="form-group row">
-            <label for="name" class="col-sm-3 col-form-label">Name*</label>
-            <div class="col-sm-8">
+            <label for="name" class="col-sm-2 col-form-label">Name*</label>
+            <div class="col-sm-10">
               <input type="text" class="form-control" id="name" name="name" placeholder="Tell me your name">
             </div>
           </div>
 
           <div class="form-group row">
-            <label for="email" class="col-sm-3 col-form-label">Email*</label>
-            <div class="col-sm-8">
+            <label for="email" class="col-sm-2 col-form-label">Email*</label>
+            <div class="col-sm-10">
               <input type="email" class="form-control" id="email" name="email" placeholder="What's your email?">
             </div>
           </div>
 
           <div class="form-group row">
-            <label class="col-sm-3 col-form-label" for="message">Description*</label>
-            <div class="col-sm-8">
+            <label class="col-sm-2 col-form-label" for="message">Description*</label>
+            <div class="col-sm-10">
               <textarea class="form-control" id="message" name="message" rows="6" placeholder="Tell me about your project"></textarea>
               <br>
               <label>Required*</label>
             </div>
           </div>
-          <div class="text-center">
-            <button id="sendButton" type="submit" class="button-submit">Send</button>
-          </div>
+          <button id="sendButton" type="submit" class="button-submit">Send</button>
         </form>
-
         <div id="error"><? echo $error; ?></div>
       </div> <!--END OF CONTACT FORM CONTAINER-->
-
       <footer>
-        <h2>Footer section</h2>
-        <p>eu iudicem ea anim quibusdam de multos tamen, mandaremus ita dolor offendit id esse an si duis mandaremus</p>
+        <div class="container text-center">
+          <p>Handmade by me <i class="fa fa-copyright" aria-hidden="true"></i> 2017</p>
+          <a href="#"><i class="fa fa-free-code-camp fa-lg" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-codepen fa-lg" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-file-pdf-o " aria-hidden="true"></i></a>
+
+        </div>
       </footer>
+    </div>
+
 
 <script type="text/javascript">
 
     $("#scroller").on('click', function (){
-          $(window).scrollTo("#content", 800);
+          $(window).scrollTo("#aboutMe", 800);
       });
 
       // function([string1, string2],target id,[color1,color2])
