@@ -20,27 +20,15 @@
 
 <body>
     <header>
-      <nav class="navbar fixed-top navbar-toggleable-md navbar-default">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fa fa-bars" aria-hidden="true"></i>
-        </button>
-        <a class="navbar-brand" href="https://www.twitch.tv/"><i class="fa fa-twitch " aria-hidden="true"></i></a>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#featured">Featured</a>
-            <a class="nav-item nav-link" href="#search">Search</a>
-            <a class="nav-item nav-link" href="#contact">Contact</a>
-          </div>
-        </div>
-      </nav><!--END OF NAVIGATION-->
         <div class="container" id="success"><? echo $successMessage; ?></div>
-        <div id="home" class='container text-center console-container'>
-            <h1>Yes I'm Sergio and I <span id='text'></span>
-            <div class='console-underscore' id='console'>&#95;</div> websites.</h1>
+        <div id="home" class='text-center console-container'>
+            <h1>Hi, I'm Sergio and I Code &#38; Build:</h1>
+            <h1><span id='text'></span>
+            <div class='console-underscore' id='console'>&#95;</div></h1>
         </div><!--END OF FRONT PAGE TITLE -->
 
-        <button class="button-main">Hire me!</button>
+        <button type="button" class="button-main" id="scrollToContact">I'm Available!</button>
+
         <div id="scroller" class="center">
           <p>More about me</p>
           <i class="fa fa-angle-double-down" aria-hidden="true"></i>
@@ -70,57 +58,74 @@
     </div><!--END ABOUT ME-->
 
     <div class="container-fluid" id="skills">
-      <h2 class="text-center">WHAT I DO</h2>
+      <h2 class="text-center">EXPERTISE</h2>
       <div class="row text-center">
-        <div class="col-md-6">
+        <div class="col-md-4">
           <h3>Code <i class="fa fa-code" aria-hidden="true"></i></h3>
-          <p>Assist in the growth or your business by applying SEO optimization techniques and
-            building a responsive and mobile ready application</p>
+          <p>Weather its a simple landing page, a blog, or an e-commerce site, I can assist in bringing your idea to life.</p>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
           <h3>Design <i class="fa fa-paint-brush" aria-hidden="true"></i></h3>
-          <p>Help bring your design to live by applying best user experience practices and enhance
-            the way the user interacts and sees your content.</p>
+          <p>Apply best user experience practices and making your design responsive and mobile-ready to enhance the way the user interacts and sees your content.</p>
+        </div>
+        <div class="col-md-4">
+          <h3>Communicate <i class="fa fa-users" aria-hidden="true"></i></h3>
+          <p>Collaborate and communicate every step of the way to make sure deadlines and requirements are being met.</p>
         </div>
       </div>
+      <hr/>
       <h2 class="text-center">SKILL SET</h2>
+      <p class="text-center">These are some of my skills, frameworks, and tools that I've used to complete past projects.</p>
       <div class="row text-center">
         <div class="col add-top-padding">
-          <h3>HTML</h3>
+          <h3 class="">HTML</h3>
           <img class="" src="icons/html5Logo.png" alt="icon">
         </div>
         <div class="col add-top-padding">
-          <h3>CSS</h3>
+          <h3 class="">CSS</h3>
           <img class="" src="icons/CSSLogo.png" alt="icon">
         </div>
         <div class="col add-top-padding">
-          <h3>JavaScript</h3>
+          <h3 class="">JavaScript</h3>
           <img class="" src="icons/jsLogo.png" alt="icon">
         </div>
         <div class="col add-top-padding">
-          <h3>Bootstrap</h3>
+          <h3 class="">Bootstrap</h3>
           <img class="" src="icons/bootstrapLogo.png" alt="icon">
         </div>
         <div class="col add-top-padding">
-          <h3>jQuery</h3>
+          <h3 class="">jQuery</h3>
           <img class="add-top-padding" src="icons/jQueryLogo1.png" alt="icon">
         </div>
         <div class="col add-top-padding">
-          <h3>GitHub</h3>
+          <h3 class="">GitHub</h3>
           <img class="" src="icons/gitHub.png" alt="icon">
         </div>
         <div class="col add-top-padding">
-          <h3>Git</h3>
+          <h3 class="">Git</h3>
           <img class="" src="icons/gitLogo.png" alt="icon">
         </div>
         <div class="col add-top-padding">
-          <h3>PHP</h3>
+          <h3 class="">DOM</h3>
+          <img class="" src="icons/dom2.png" alt="icon">
+        </div>
+        <div class="col add-top-padding">
+          <h3 class="">Atom Editor</h3>
+          <img class="" src="icons/atomIcon.png" alt="icon">
+        </div>
+        <div class="col add-top-padding">
+          <h3 class="">Responsive Web Design</h3>
+          <img class="" src="icons/responsiveIcon.png" alt="icon">
+        </div>
+        <div class="col add-top-padding">
+          <h3 class="">PHP</h3>
           <img class="" src="icons/php-sm.png" alt="icon">
         </div>
+
       </div>
+
       <!--Trigger Resume Modal-->
-      <button type="button" class="button-submit" data-target="#resume" data-toggle="modal">Resume
-        <i class="fa fa-download " aria-hidden="true"></i></button>
+      <button type="button" class="button-submit add-margin" data-target="#resume" data-toggle="modal">Resume</button>
 
       <!-- Modal Window For Resume -->
       <div class="modal fade" id="resume" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -133,7 +138,7 @@
               </button>
             </div>
 
-
+  <!--RESUME INSIDE MODAL-->
   <div class="modal-body">
     <div id="resume">
       <h4>Objective</h4>
@@ -142,7 +147,7 @@
       <h4>Education</h4>
       <hr/>
       <p>Bacherlor of Science, Computer Engineering Technology</p>
-      <p>University of Houston, <span>Houston, Tx</span></p>
+      <p>University of Houston <span class="date">Houston, Tx</span></p>
       <div class="row">
         <div class="col">
           <ul>
@@ -180,7 +185,7 @@
       <h4>Skills and Stengths</h4>
       <hr/>
       <div class="row">
-        <div class="col">
+        <div class="col" id="left-list">
           <p>Most proficient:</p>
           <ul>
             <li>HTML/CSS</li>
@@ -195,22 +200,22 @@
         <div class="col">
           <p>Also had experience:</p>
           <ul>
-            <li>Using API's</li>
-            <li>Responsive Design</li>
-            <li>Git</li>
-            <li>PHP/Java/C</li>
-            <li>FTP tools</li>
-            <li>Databases with SQlite</li>
+            <li class="list-style">Using API's</li>
+            <li class="list-style">Responsive Web Design</li>
+            <li class="list-style">Git</li>
+            <li class="list-style">PHP/Java/C</li>
+            <li class="list-style">FTP tools</li>
+            <li class="list-style">Databases with SQlite</li>
         </ul>
         </div>
-        <div class="col">
-          <p>Hardware:</p>
+        <div class="col" id="right-list">
+          <p>Exporsure to hardware:</p>
           <ul>
-            <li>Microcontrollers</li>
-            <li>ARM Cortex M3</li>
-            <li>Oscilloscopes</li>
-            <li>Function Generators</li>
-            <li>Multimeters</li>
+            <li class="list-style">Microcontrollers</li>
+            <li class="list-style">ARM Cortex M3</li>
+            <li class="list-style">Oscilloscopes</li>
+            <li class="list-style">Function Generators</li>
+            <li class="list-style">Multimeters</li>
         </ul>
         </div>
       </div>
@@ -226,13 +231,13 @@
             <ul><li class="list-style">Designed an Automatic Drink Dispenser with a LCD interface as the menu. Assisted with the design, software, and hardware of the prototype.</li></ul>
         </ul>
       <hr/>
-    </div><!--END OF RESUME-->
+    </div><!--END OF RESUME INSIDE MODAL-->
 
 
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <button id="download" type="button" class="btn btn-warning"><a href="examplefile.pdf" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></button>
             </div>
           </div>
         </div>
@@ -286,7 +291,7 @@
           </div>
         </div>
       </div><!--END OF CARD ROW-->
-    </div><!--END OF PROJECTS SECTION-->
+    </div><!--END OF PORTFOLIO SECTION-->
 
     <div class="contaniner-fluid" id="form-container">
       <div class="container">
@@ -327,24 +332,26 @@
           <a href="#"><i class="fa fa-codepen fa-lg" aria-hidden="true"></i></a>
           <a href="#"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
           <a href="#"><i class="fa fa-file-pdf-o " aria-hidden="true"></i></a>
-
         </div>
       </footer>
     </div>
 
 
 <script type="text/javascript">
-
+    //Auto Scroll Effects
     $("#scroller").on('click', function (){
           $(window).scrollTo("#aboutMe", 800);
       });
+    $("#scrollToContact").on('click', function (){
+          $(window).scrollTo("#form-container", 800);
+      });
 
       // function([string1, string2],target id,[color1,color2])
-      consoleText(['Build', 'Code', 'Design'], 'text',['#33996e','#33996e','#33996e']);
+      consoleText(['Web-sites', 'Landing Pages','Web-apps'],'text',['#35bb83','#35bb83','#35bb83']);
 
     function consoleText(words, id, colors) {
       if (colors === undefined) colors = ['#b57070'];
-      var myTite ="Hi, Im Sergio";
+
       var visible = true;
       var con = document.getElementById('console');
       var letterCount = 1;
@@ -381,12 +388,11 @@
       },80)
       window.setInterval(function() {
         if (visible === true) {
-          con.className = 'console-underscore hidden'
+          con.className = 'console-underscore hidden';
           visible = false;
 
         } else {
-          con.className = 'console-underscore'
-
+          con.className = 'console-underscore';
           visible = true;
         }
       }, 400)
