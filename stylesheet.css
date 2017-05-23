@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Khula:400,600,700');
-
+/*@media only screen and (-webkit-min-device-pixel-ratio: 1) {
+     ::i-block-chrome, .col {
+     color:red;
+    }
+}*/
 body{
   color: #bebebe;
   font-family:'Khula', sans-serif;
 }
 header{
-  background-image: url(images/background-2.jpg);
+  background-image: url(images/background3.jpg);
   /* Use viewport height */
   height: 100vh;
   background-size: cover;
@@ -25,7 +29,7 @@ h2{
   padding: 30px;
 }
 h3{
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 form{
 padding-bottom: 25px;
@@ -78,7 +82,7 @@ footer a:hover{
   color: #ffffff;
   border: none #33996e 3px;
   text-align: center;
-  width: 150px;
+  width: 165px;
   height: 50px;
   margin: 0 auto;
   border-radius: 40px;
@@ -229,13 +233,34 @@ footer a:hover{
   max-width: 650px;
   margin: 30px auto;
 }
+/*Fix issue with safari by adjusting flex setting and
+fixed margins on skiil section*/
 .col{
-  padding-left: 7.5px;
-  padding-right: 7.5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin:0;
+  flex: 1 0 20%; // where 50% is the intended size of the items*/
+}
+}
+.container-fluid .col{
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 2px;
+  padding-left: 2px;
+
 }
 #left-list{
-  padding-left: 15px
+  padding-left: 15px;
 }
 #right-list{
-  padding-right: 15px
+  padding-right: 15px;
+}
+.row {
+    &:before {
+        content: none;
+    }
+
+    &:after {
+        content: '';
+    }
 }

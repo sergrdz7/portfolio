@@ -1,3 +1,60 @@
+<?php
+
+    $error = "";
+    $successMessage = "";
+
+    if($_POST){
+
+
+        if(!$_POST["email"]) {
+
+            $error .= "An email address is required.<br>";
+
+        }
+        if(!$_POST["name"]) {
+
+            $error .= "Enter your name or company.<br>";
+
+        }
+        if(!$_POST["message"]) {
+
+            $error .= "Tell me about your project.<br>";
+
+        }
+
+        //VALIDATE EMAIL
+        if ($_POST['
+        email'] && filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+            $error .= "The email address is invalid.<br>";
+        }
+
+        if ($error != "") {
+
+            $error = '<div class="alert alert-warning" role="alert"><p><strong>'.$error.'</strong></p></div>';
+
+        } else {
+            //SET EMAIL VARIABLES
+            $emailTo = "sergiordz7@gmail.com";
+            $subject = $_POST['name'];
+            $message = $_POST['message'];
+            $headers = "From: ".$_POST['email'];
+
+
+            //SEND EMAIL FUNCTION
+            if(mail($emailTo, $subject, $message, $headers)) {
+                //DISPLAY SUCCES MESSAGE
+                $successMessage = '<div class="alert alert-success" role="alert"><p><strong>Your message was sent. I will get back to you as soon as I can.</strong></p></div>';
+            } else {
+                //DISPLAY ERROR MASSAGE IF EMAIL FAILS
+                $successMessage = "";
+                $error = '<div class="alert alert-danger" role="alert"><p><strong>Your message was not sent, please try again later.</strong></p></div>';
+            }
+
+        }
+    }
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,20 +66,22 @@
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--Other CSS files-->
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="stylesheet.css">
 
     <!--  Plug-ins jQuery, jQuery ScrollTO, MatchHeight.js   -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
-  </head>
 
+    <link rel="icon" type="image/png" href="icons/titletag.ico">
+    <title>SergDev</title>
+  </head>
 
 <body>
     <header>
         <div class="container" id="success"><? echo $successMessage; ?></div>
         <div id="home" class='text-center console-container'>
-            <h1>Hi, I'm Sergio and I Code &#38; Build:</h1>
+            <h1>Hi, I'm Sergio and I Build</h1>
             <h1><span id='text'></span>
             <div class='console-underscore' id='console'>&#95;</div></h1>
         </div><!--END OF FRONT PAGE TITLE -->
@@ -66,7 +125,7 @@
         </div>
         <div class="col-md-4">
           <h3>Design <i class="fa fa-paint-brush" aria-hidden="true"></i></h3>
-          <p>Apply best user experience practices and making your design responsive and mobile-ready to enhance the way the user interacts and sees your content.</p>
+          <p>Apply best user experience practices and making your design responsive and mobile-ready, enhancing the way the user interacts and sees your content.</p>
         </div>
         <div class="col-md-4">
           <h3>Communicate <i class="fa fa-users" aria-hidden="true"></i></h3>
@@ -78,48 +137,48 @@
       <p class="text-center">These are some of my skills, frameworks, and tools that I've used to complete past projects.</p>
       <div class="row text-center">
         <div class="col add-top-padding">
-          <h3 class="">HTML</h3>
-          <img class="" src="icons/html5Logo.png" alt="icon">
+          <h3>HTML</h3>
+          <img src="icons/html5Logo.png" alt="icon">
         </div>
         <div class="col add-top-padding">
-          <h3 class="">CSS</h3>
-          <img class="" src="icons/CSSLogo.png" alt="icon">
+          <h3>CSS</h3>
+          <img src="icons/CSSLogo.png" alt="icon">
         </div>
         <div class="col add-top-padding">
-          <h3 class="">JavaScript</h3>
-          <img class="" src="icons/jsLogo.png" alt="icon">
+          <h3>JavaScript</h3>
+          <img src="icons/jsLogo.png" alt="icon">
         </div>
         <div class="col add-top-padding">
-          <h3 class="">Bootstrap</h3>
-          <img class="" src="icons/bootstrapLogo.png" alt="icon">
+          <h3>Bootstrap</h3>
+          <img src="icons/bootstrapLogo.png" alt="icon">
         </div>
         <div class="col add-top-padding">
-          <h3 class="">jQuery</h3>
-          <img class="add-top-padding" src="icons/jQueryLogo1.png" alt="icon">
+          <h3>jQuery</h3>
+          <img src="icons/jqueryLogo1.png" alt="icon">
         </div>
         <div class="col add-top-padding">
-          <h3 class="">GitHub</h3>
-          <img class="" src="icons/gitHub.png" alt="icon">
+          <h3>GitHub</h3>
+          <img src="icons/gitHub.png" alt="icon">
         </div>
         <div class="col add-top-padding">
-          <h3 class="">Git</h3>
-          <img class="" src="icons/gitLogo.png" alt="icon">
+          <h3>Git</h3>
+          <img src="icons/gitLogo.png" alt="icon">
         </div>
         <div class="col add-top-padding">
-          <h3 class="">DOM</h3>
-          <img class="" src="icons/dom2.png" alt="icon">
+          <h3>DOM</h3>
+          <img src="icons/dom2.png" alt="icon">
         </div>
         <div class="col add-top-padding">
-          <h3 class="">Atom Editor</h3>
-          <img class="" src="icons/atomIcon.png" alt="icon">
+          <h3>Atom Editor</h3>
+          <img src="icons/atomIcon.png" alt="icon">
         </div>
         <div class="col add-top-padding">
-          <h3 class="">Responsive Web Design</h3>
-          <img class="" src="icons/responsiveIcon.png" alt="icon">
+          <h3>Responsive Web Design</h3>
+          <img src="icons/responsiveIcon.png" alt="icon">
         </div>
         <div class="col add-top-padding">
-          <h3 class="">PHP</h3>
-          <img class="" src="icons/php-sm.png" alt="icon">
+          <h3>PHP</h3>
+          <img src="icons/php-sm.png" alt="icon">
         </div>
 
       </div>
@@ -169,7 +228,7 @@
       <hr/>
       <h4>Experience</h4>
       <hr/>
-      <h4>Miguel's Carpentry and Construction</h4>
+      <h3>Miguel's Carpentry and Construction</h3>
       <p>I've worked for a small family business in carpetry for a number of years where I got to
         experince a diverse number of roles.</p>
       <ul>
@@ -237,7 +296,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button id="download" type="button" class="btn btn-warning"><a href="examplefile.pdf" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></button>
+              <button id="download" type="button" class="btn btn-warning"><a href="SergioRodriguez_Resume.pdf" download><i class="fa fa-download" aria-hidden="true"></i> Download</a></button>
             </div>
           </div>
         </div>
@@ -327,11 +386,10 @@
       <footer>
         <div class="container text-center">
           <p>Handmade by me <i class="fa fa-copyright" aria-hidden="true"></i> 2017</p>
-          <a href="#"><i class="fa fa-free-code-camp fa-lg" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-codepen fa-lg" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-file-pdf-o " aria-hidden="true"></i></a>
+          <a href="https://www.freecodecamp.com/sergrdz7"><i class="fa fa-free-code-camp fa-lg" aria-hidden="true"></i></a>
+          <a href="https://github.com/sergrdz7"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
+          <a href="http://codepen.io/serg_92/"><i class="fa fa-codepen fa-lg" aria-hidden="true"></i></a>
+          <!-- <a href="#"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a> -->
         </div>
       </footer>
     </div>
@@ -347,7 +405,7 @@
       });
 
       // function([string1, string2],target id,[color1,color2])
-      consoleText(['Web-sites', 'Landing Pages','Web-apps'],'text',['#35bb83','#35bb83','#35bb83']);
+      consoleText(['Web-sites', 'Landing Pages','Web-apps', 'Internet Things'],'text',['#35bb83','#35bb83','#35bb83','#35bb83']);
 
     function consoleText(words, id, colors) {
       if (colors === undefined) colors = ['#b57070'];
@@ -373,19 +431,19 @@
             target.setAttribute('style', 'color:' + colors[0])
             letterCount += x;
             waiting = false;
-          }, 1000)
+          }, 800)
         } else if (letterCount === words[0].length + 1 && waiting === false) {
           waiting = true;
           window.setTimeout(function() {
             x = -1;
             letterCount += x;
             waiting = false;
-          }, 1000)
+          }, 800)
         } else if (waiting === false) {
           target.innerHTML = words[0].substring(0, letterCount)
           letterCount += x;
         }
-      },80)
+      },70)
       window.setInterval(function() {
         if (visible === true) {
           con.className = 'console-underscore hidden';
